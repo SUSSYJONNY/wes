@@ -7,7 +7,7 @@ paddle1Y = '';
 paddle2Y = 685;
 
 paddle1Height = 110;
-paddle2Height = 70;
+paddle2Height = 110;
 
 score1 = 0;
 score2 = 0;
@@ -28,8 +28,22 @@ ball = {
     dy:3
 }
 
+rightWrist = 0;
+leftWrist = 0;
+scoreRightWrist = 0;
+
+gameStatus = "";
+
 function setup(){
   canvas =  createCanvas(700,550);
+  canvas.parent(canvas);
+
+  video = createCapture(VIDEO);
+  video.size(700,550);
+  video.hide();
+
+  poseNet = ml5.poseNet(video, modelPoses);
+  poseNet.on("poses", gotPoses);
 }
 
 
