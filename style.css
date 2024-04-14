@@ -1,26 +1,38 @@
-body
-{
+body {
     background-size: cover;
 }
 
-.heading{
+.heading {
     width: 100%;
 }
 
-.heading h3{
+.heading h3 {
     display: inline;
 }
-.heading button{
+
+.heading button {
     float: right;
     border: 1px solid powderblue;
 }
 
-#start ,#status , #restart {
+#start,
+#status,
+#restart {
     font-size: 22px;
 }
 
-h4{
+h4 {
     background-color: grey;
     color: white;
     line-height: 2;
+}
+
+canvas {
+    border: 3px solid purple;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px white;
+}
+
+.modal-dialog {
+    width: 70%;
 }
